@@ -19,7 +19,7 @@ const Footer = () => {
           </a>
 
           <p className="mt-6 text-base leading-7 font-montserrat text-white sm:max-w-sm">
-            Finanzberatung Finanzberatung Finanzberatung Finanzberatung.
+            Financial Guide
           </p>
 
           <div className="flex items-center gap-5 mt-8">

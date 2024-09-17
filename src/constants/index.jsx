@@ -12,7 +12,7 @@ export const footerLinks = [
         title: 'Kontakt',
         links: [
             { name: 'r.bawa@mitnorm.com' , link: 'mailto:customer@nike.com'  },
-            { name: '+49 58795216', link: 'tel:+49 1732768952' },
+            { name: '+49 1732768952', link: 'tel:+49 1732768952' },
         ],
     },  
 ]

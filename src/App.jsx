@@ -1,4 +1,4 @@
-import { Hero, Footer, Calender } from './sections';
+import { Hero, Footer, Calender, SurveyComponent } from './sections';
 import Nav from './components/Nav';
 
 const App = () => (
@@ -7,6 +7,9 @@ const App = () => (
     <section className="xl:padding-l wide:padding-r padding-b">
       <Hero />
     </section>
+    {/* <section className="xl:padding-l wide:padding-r padding-b">
+      <SurveyComponent />
+    </section> */}
     <section>
       <Calender />
     </section>

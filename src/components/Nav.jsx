@@ -2,7 +2,7 @@ import { headerLogo } from '../assets/images'
 
 const Nav = () => {
   return (
-    <header className="padding-x py-8 absolute z-10 w-full">
+    <header className="padding-x py-8  z-10 w-full">
       <nav className="flex justify-between items-center max-container border-b-4 border-black pb-4 max-width-navbar">
         <a href="/" className="flex items-center gap-4">
           <img
@@ -12,7 +12,7 @@ const Nav = () => {
             height={20}
           />   
           <p className="text-black text-[18px] font-bold cursor-pointer">
-            Ronney Bawa | Finanzberater 
+            Ronney Bawa | Financial Guide 
           </p>
         </a>
 
