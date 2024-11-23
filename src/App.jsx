@@ -13,7 +13,7 @@ const App = () => (
     <section>
       <Calender />
     </section>
-    <section className="bg-black padding-x padding-t pb-8">
+    <section className="bg-beige padding-x padding-t pb-8">
       <Footer />
     </section>
   </main>

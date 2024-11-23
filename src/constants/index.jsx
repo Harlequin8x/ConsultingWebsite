@@ -11,8 +11,9 @@ export const footerLinks = [
     {
         title: 'Kontakt',
         links: [
-            { name: 'r.bawa@mitnorm.com' , link: 'mailto:customer@nike.com'  },
+            { name: 'r.bawa@mitnorm.com' , link: 'r.bawa@mitnorm.com'  },
             { name: '+49 1732768952', link: 'tel:+49 1732768952' },
+            { name: 'Hannoverschestraße 99, 30916 Isernhagen', link: ''},
         ],
     },  
 ]
