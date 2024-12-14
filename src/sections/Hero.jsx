@@ -3,7 +3,9 @@ const rb_video = '/videos/rb_video.mp4';  // Den Pfad zum Video hier direkt defi
 import arrow from '../assets/images/arrow.png'; 
 
 const Hero = () => {
-  const title1 = ['Das Beste an Teamarbeit ist, dass dir Ronney immer zur Seite steht!'];
+  const title1 = ['Das Beste an Teamarbeit ist, ',
+    'dass dir Ronney immer zur Seite steht',
+  ];
   const title3 = ['Drück mich!'];
   const title2 = [
     <a
@@ -44,8 +46,9 @@ const Hero = () => {
       className="w-full flex flex-col justify-start items-center min-h-screen gap-10 max-container"
     >
       {/* Titel oben in der Mitte */}
-      <div className="w-full text-center font-bold text-4xl mt-10">
-        {title1}
+      <div className="w-full text-center font-bold text-6xl mt-10">
+        <div>{title1[0]}</div> {/* Erster Teil des Textes */}
+        <div className="mt-2">{title1[1]}</div> {/* Zweiter Teil des Textes, mit Abstand nach unten und Versetzung */}
       </div>
 
       {/* Titel oben in der Mitte */}
