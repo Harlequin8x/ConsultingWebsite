@@ -5,16 +5,16 @@ import { energy, karriere, mitNORM1, mitNORM2, personal } from '../assets/icons'
 
 const Footer = () => {
   return (
-    <footer className="max-container bg-beige">
+    <footer className="max-container bg-beige fixed-footer">
       <div className="flex justify-between items-start gap-20 flex-wrap max-lg:flex-col">
         
         {/* Footer left side */}
-        <div className="flex flex-col items-start">
+        <div className="flex flex-col items-start logo-wrapper">
           <a href="/">
             <img
               src={headerLogo}
               width={150}
-              height={46}
+              height={150}
               alt="Logo"
             />
           </a>
@@ -23,7 +23,7 @@ const Footer = () => {
             Dein Financial Guide
           </p>
 
-          <div className="flex items-center gap-5 mt-8">
+          <div className="flex items-center gap-5 mt-8 ">
             {socialMedia.map((icon) => (
               <a
                 href={icon.href}

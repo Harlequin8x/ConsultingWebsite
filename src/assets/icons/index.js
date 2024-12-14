@@ -8,6 +8,7 @@ import mitNORM1 from './mitNORM1.svg'
 import mitNORM2 from './mitNORM2.png'
 import personal from './personal.svg'
 
+
 export {
     instagram,
     linkedin,
@@ -17,5 +18,5 @@ export {
     karriere,
     mitNORM1,
     mitNORM2,
-    personal,
+    personal,    
 }

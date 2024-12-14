@@ -2,13 +2,13 @@ import { headerLogo } from '../assets/images'
 
 const Nav = () => {
   return (
-    <header className="padding-x py-8  z-10 w-full">
-      <nav className="flex justify-between items-center max-container border-b-4 border-black pb-4 max-width-navbar">
+    <header className="padding-x py-8 z-10 w-full">
+      <nav className="flex justify-between items-center border-b-4 border-black pb-2 max-width-navbar"> {/* max-container */}
         <a href="/" className="flex items-center gap-4">
           <img
             src={headerLogo}
             alt="Logo"
-            width={100}
+            width={200}
             height={20}
           />   
           <p className="text-black text-[18px] font-bold cursor-pointer">

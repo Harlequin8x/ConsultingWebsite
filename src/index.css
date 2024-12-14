@@ -55,4 +55,27 @@
   .info-text {
     @apply font-montserrat text-slate-gray text-lg leading-7;
   }
+
+  .fixed-footer {
+    height: 300px; /* Fixierte Höhe für den Footer */
+    max-height: 300px; /* Maximale Höhe */
+    overflow: hidden; /* Verhindert Inhalt, der den Footer überschreitet */
+  }
+
+  /* Vergrößere nur das Logo */
+.logo {
+  transform: scale(1.5); /* Vergrößert das Logo um 150% */
+  transform-origin: center; /* Hält die Vergrößerung zentriert */
+}
+
+/* Behalte die übrigen Abstände im Footer bei */
+.logo-wrapper {
+  display: inline-block; /* Sorgt dafür, dass das Logo im Block bleibt */
+}
+
+.logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 }
