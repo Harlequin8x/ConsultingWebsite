@@ -11,7 +11,7 @@ const Nav = () => {
             width={200}
             height={20}
           />   
-          <p className="text-black text-[18px] font-bold cursor-pointer">
+          <p className="text-black text-[30px] font-bold cursor-pointer">
             Ronney Bawa | Financial Guide 
           </p>
         </a>

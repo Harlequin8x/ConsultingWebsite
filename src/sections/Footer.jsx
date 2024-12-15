@@ -1,7 +1,7 @@
-import { headerLogo } from '../assets/images/index'
-import { copyright } from '../assets/images/index'
-import { socialMedia, footerLinks } from '../constants/index'
-import { energy, karriere, mitNORM1, mitNORM2, personal } from '../assets/icons'
+import { headerLogo } from '../assets/images/index';
+import { copyright } from '../assets/images/index';
+import { socialMedia, footerLinks } from '../constants/index';
+import { energy, karriere, mitNORM1, mitNORM2, personal } from '../assets/icons';
 
 const Footer = () => {
   return (
@@ -66,7 +66,7 @@ const Footer = () => {
         </div>
 
         {/* Footer right side */}
-        <div className="flex flex-wrap gap-10">
+        <div className="flex flex-col gap-10">
           {footerLinks.map((section) => (
             <div key={section.title}>
               <h4 className="text-gray-800 font-montserrat text-2xl leading-normal font-medium mb-6">{section.title}</h4>
@@ -82,8 +82,28 @@ const Footer = () => {
               </ul>
             </div>
           ))}
-        </div>
 
+          {/* Impressum & Kontakt */}
+{/*           <div className="flex flex-col gap-4 mt-6">
+            <h4 className="text-gray-800 font-montserrat text-2xl leading-normal font-medium mb-4">
+              Impressum
+            </h4>
+            <p className="text-gray-800 font-montserrat text-base leading-6">
+              <strong>Rb Beratung</strong><br />
+              Ronney Bawa<br />
+              Birkenweg 51<br />
+              30827 Garbsen<br />
+              <a href="mailto:R.Bawa@mitNorm.com" className="text-blue-500 hover:underline">
+                R.Bawa@mitNorm.com
+              </a><br />
+              <a href="tel:+491732768952" className="text-blue-500 hover:underline">
+                0173 276 8952
+              </a><br />
+              Registernummer: 03241005
+            </p>
+          </div>
+        </div> */}
+ </div>
       </div>
 
       {/* Copyright Bereich */}
@@ -102,7 +122,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
 export default Footer;

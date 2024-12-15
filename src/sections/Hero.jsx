@@ -4,7 +4,7 @@ import arrow from '../assets/images/arrow.png';
 
 const Hero = () => {
   const title1 = ['Das Beste an Teamarbeit ist, ',
-    'dass dir Ronney immer zur Seite steht',
+    'dass dir Ronney immer zur Seite steht!',
   ];
   const title3 = ['Drück mich!'];
   const title2 = [
