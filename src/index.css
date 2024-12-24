@@ -56,26 +56,22 @@
     @apply font-montserrat text-slate-gray text-lg leading-7;
   }
 
-  .fixed-footer {
-    height: 300px; /* Fixierte Höhe für den Footer */
-    max-height: 300px; /* Maximale Höhe */
-    overflow: hidden; /* Verhindert Inhalt, der den Footer überschreitet */
+
+  .logo-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Zentriert das Logo */
+    text-align: center;
+    gap: 1rem; /* Abstand zwischen Logo und Text */
   }
 
-  /* Vergrößere nur das Logo */
-.logo {
-  transform: scale(1.5); /* Vergrößert das Logo um 150% */
-  transform-origin: center; /* Hält die Vergrößerung zentriert */
-}
+  @media (max-width: 768px) {
+    .logo-wrapper img {
+      max-width: 80%; /* Verkleinert das Logo */
+      max-height: 100px; /* Maximale Höhe für Mobilgeräte */
+    }
+  }
+  
+  
 
-/* Behalte die übrigen Abstände im Footer bei */
-.logo-wrapper {
-  display: inline-block; /* Sorgt dafür, dass das Logo im Block bleibt */
-}
-
-.logo-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 }

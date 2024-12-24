@@ -1,27 +1,24 @@
-import { headerLogo } from '../assets/images/index';
-import { copyright } from '../assets/images/index';
-import { socialMedia, footerLinks } from '../constants/index';
-import { energy, karriere, mitNORM1, mitNORM2, personal } from '../assets/icons';
+import { headerLogo } from '../assets/images/index'
+import { copyright } from '../assets/images/index'
+import { socialMedia, footerLinks } from '../constants/index'
+import { energy, karriere, mitNORM1, mitNORM2, personal } from '../assets/icons'
 
 const Footer = () => {
   return (
-    <footer className="max-container bg-beige fixed-footer">
+    <footer className="max-container bg-beige">
       <div className="flex justify-between items-start gap-20 flex-wrap max-lg:flex-col">
-        
         {/* Footer left side */}
-        <div className="flex flex-col items-start logo-wrapper">
+        <div className="flex flex-col items-start logo-wrapper -my-20">
           <a href="/">
             <img
               src={headerLogo}
-              width={150}
-              height={150}
+              width={250}
+              height={250}
               alt="Logo"
             />
           </a>
 
-          <p className="mt-6 leading-7 font-montserrat text-gray-800 sm:max-w-sm font-bold text-2xl">
-            Dein Financial Guide
-          </p>
+          <p className="leading-7 font-montserrat text-gray-800 sm:max-w-sm font-bold text-3xl -my-4">Dein Financial Guide</p>
 
           <div className="flex items-center gap-5 mt-8 ">
             {socialMedia.map((icon) => (
@@ -29,39 +26,84 @@ const Footer = () => {
                 href={icon.href}
                 key={icon.alt}
               >
-                <div className="flex justify-center items-center w-12 h-12 bg-gray-200 rounded-full">
+                <div className="flex justify-center items-center w-14 h-14 bg-gray-200 rounded-full">
                   <img
                     src={icon.src}
                     alt={icon.alt}
-                    width={24}
-                    height={24}
+                    width={30}
+                    height={30}
                   />
                 </div>
               </a>
             ))}
           </div>
-        </div>   
+        </div>
 
         {/* Footer mid */}
         <div className="flex flex-col items-center gap-14 mt-2">
           <div className="flex justify-center gap-10">
-            <a href="https://www.mitnorm.de" target="_blank" rel="noopener noreferrer">
-              <img src={mitNORM2} alt="MitNORM2 Icon" width={200} height={150} />
-            </a>            
-            <a href="https://www.daskarriereinstitut.de/de" target="_blank" rel="noopener noreferrer">
-              <img src={karriere} alt="Karriere Icon" width={200} height={200} />
+            <a
+              href="https://www.mitnorm.de"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={mitNORM2}
+                alt="MitNORM2 Icon"
+                width={200}
+                height={150}
+              />
             </a>
-            <a href="https://www.wirpersonalberater.de/" target="_blank" rel="noopener noreferrer">
-              <img src={personal} alt="Personal Icon" width={200} height={150} />
+            <a
+              href="https://www.daskarriereinstitut.de/de"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={karriere}
+                alt="Karriere Icon"
+                width={200}
+                height={200}
+              />
+            </a>
+            <a
+              href="https://www.wirpersonalberater.de/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={personal}
+                alt="Personal Icon"
+                width={200}
+                height={150}
+              />
             </a>
           </div>
           <div className="flex justify-center gap-10">
-            <a href="https://www.energyfinance.de/" target="_blank" rel="noopener noreferrer">
-              <img src={energy} alt="Energy Icon" width={200} height={200} />
+            <a
+              href="https://www.energyfinance.de/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={energy}
+                alt="Energy Icon"
+                width={200}
+                height={200}
+              />
             </a>
-            <a href="https://www.mitnormfirmenberatung.de" target="_blank" rel="noopener noreferrer">
-              <img src={mitNORM1} alt="MitNORM1 Icon" width={200} height={150} />
-            </a>            
+            <a
+              href="https://www.mitnormfirmenberatung.de"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={mitNORM1}
+                alt="MitNORM1 Icon"
+                width={200}
+                height={150}
+              />
+            </a>
           </div>
         </div>
 
@@ -82,28 +124,7 @@ const Footer = () => {
               </ul>
             </div>
           ))}
-
-          {/* Impressum & Kontakt */}
-{/*           <div className="flex flex-col gap-4 mt-6">
-            <h4 className="text-gray-800 font-montserrat text-2xl leading-normal font-medium mb-4">
-              Impressum
-            </h4>
-            <p className="text-gray-800 font-montserrat text-base leading-6">
-              <strong>Rb Beratung</strong><br />
-              Ronney Bawa<br />
-              Birkenweg 51<br />
-              30827 Garbsen<br />
-              <a href="mailto:R.Bawa@mitNorm.com" className="text-blue-500 hover:underline">
-                R.Bawa@mitNorm.com
-              </a><br />
-              <a href="tel:+491732768952" className="text-blue-500 hover:underline">
-                0173 276 8952
-              </a><br />
-              Registernummer: 03241005
-            </p>
-          </div>
-        </div> */}
- </div>
+        </div>
       </div>
 
       {/* Copyright Bereich */}
@@ -122,7 +143,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
