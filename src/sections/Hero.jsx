@@ -7,7 +7,7 @@ const Hero = () => {
     'Das Beste an Teamarbeit ist, ',
     'dass dir Ronney immer zur Seite steht!',
   ];
-  
+
   const title2 = [
     <a
       key="myvi-link"
@@ -62,15 +62,15 @@ const Hero = () => {
       <div className="w-full text-center font-bold text-6xl mt-10">
         <div>{title1[0]}</div> {/* Erster Teil des Textes */}
         <div className="mt-2">{title1[1]}</div> {/* Zweiter Teil des Textes, mit Abstand nach unten und Versetzung */}
-      </div>        
+      </div>
 
       {/* Video Container mit Play-Button */}
       <div className="relative w-full mt-6">
-        {/* Video */}
+        {/* Video für größere Bildschirme */}
         <video
           id="video"
           src={rb_video}
-          className="w-full h-auto object-cover rounded-lg shadow-lg"
+          className="w-full h-auto object-cover rounded-lg shadow-lg" // Beibehalten für größere Bildschirme
           muted // Video ist zunächst stumm
           playsInline
           onClick={handleVideoClick} // Funktion, um Video zu pausieren/abzuspielen
@@ -80,7 +80,7 @@ const Hero = () => {
         <button
           id="play-button"
           onClick={handlePlayButtonClick}
-          className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-4xl rounded-lg"
+          className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-8xl rounded-lg"
         >
           ▶
         </button>
