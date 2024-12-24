@@ -1,12 +1,13 @@
-import { ronney1, ronney2 } from '../assets/images'; // Dein Import von Bildern, die hier nicht verändert wurden.
-const rb_video = '/videos/rb_video.mp4';  // Den Pfad zum Video hier direkt definieren
-import arrow from '../assets/images/arrow.png'; 
+import { ronney1, ronney2 } from '../assets/images';
+const rb_video = '/videos/rb_video.mp4';
+import arrow from '../assets/images/arrow.png';
 
 const Hero = () => {
-  const title1 = ['Das Beste an Teamarbeit ist, ',
+  const title1 = [
+    'Das Beste an Teamarbeit ist, ',
     'dass dir Ronney immer zur Seite steht!',
   ];
-  const title3 = ['Drück mich!'];
+  
   const title2 = [
     <a
       key="myvi-link"
@@ -18,7 +19,7 @@ const Hero = () => {
       Nutze den MYVI-Effekt auch für dich!
     </a>,
   ];
-  const title = ['Vision von Ronney Bawa'];  
+  const title = ['Vision von Ronney Bawa'];
 
   const paragraphs = [
     'Mandant zuerst - Die Interessen des Mandanten an die erste Stelle zu setzen, ist ein Markenzeichen unserer Professionalität. Als Financial Guide handelt man ehrlich und stellt keinen persönlichen Gewinn oder Vorteil vor die Interessen des Mandanten.',
@@ -31,13 +32,25 @@ const Hero = () => {
     'Sorgfaltspflicht - Sorgfalt erfordert die rechtzeitige und sorgfältige Erfüllung beruflicher Verpflichtungen und die Beachtung der gebotenen Sorgfalt bei der Planung, Überwachung und Erbringung beruflicher Dienstleistungen.',
   ];
 
-  const rb_video = '/videos/rb_video.mp4';
-
-  // Handler, um das Video beim Klicken zu starten
   const handleVideoClick = () => {
-    const videoElement = document.getElementById("video");
+    const videoElement = document.getElementById('video');
+
+    if (videoElement.paused) {
+      videoElement.play(); // Video abspielen
+      videoElement.muted = false; // Optional: Ton aktivieren
+    } else {
+      videoElement.pause(); // Video pausieren
+    }
+  };
+
+  const handlePlayButtonClick = () => {
+    const videoElement = document.getElementById('video');
     videoElement.play(); // Video abspielen
     videoElement.muted = false; // Optional: Ton aktivieren
+
+    // Versteckt den Play-Button
+    const playButton = document.getElementById('play-button');
+    if (playButton) playButton.style.display = 'none';
   };
 
   return (
@@ -49,42 +62,34 @@ const Hero = () => {
       <div className="w-full text-center font-bold text-6xl mt-10">
         <div>{title1[0]}</div> {/* Erster Teil des Textes */}
         <div className="mt-2">{title1[1]}</div> {/* Zweiter Teil des Textes, mit Abstand nach unten und Versetzung */}
-      </div>
+      </div>        
 
-      {/* Titel oben in der Mitte */}
-      <div className="w-full text-center font-bold text-4xl mt-10 text-red-500">
-        {title3}
-      </div>
-
-       {/* Pfeilbild unter "Play me!" */}
-       <div className="w-full text-center mt-2">
-        <img
-          src={arrow} 
-          alt="Arrow"
-          className="mx-auto w-12 h-20" // Größe des Pfeils anpassen, z.B. 32px
-        />
-      </div>
-
-      {/* Video unter dem Titel, das beim Klicken abgespielt wird */}
-      <div className="w-full">
+      {/* Video Container mit Play-Button */}
+      <div className="relative w-full mt-6">
+        {/* Video */}
         <video
           id="video"
-          src={rb_video} // Der Pfad zum Video
+          src={rb_video}
           className="w-full h-auto object-cover rounded-lg shadow-lg"
           muted // Video ist zunächst stumm
           playsInline
-          onClick={handleVideoClick} // Funktion, um Video beim Klicken zu starten
+          onClick={handleVideoClick} // Funktion, um Video zu pausieren/abzuspielen
         />
+
+        {/* Play Button */}
+        <button
+          id="play-button"
+          onClick={handlePlayButtonClick}
+          className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-4xl rounded-lg"
+        >
+          ▶
+        </button>
       </div>
 
       {/* Titel und Links */}
-      <div className="w-full text-center font-bold text-4xl mt-10">
-        {title2}
-      </div>
+      <div className="w-full text-center font-bold text-4xl mt-10">{title2}</div>
 
-      <div className="w-full text-center font-bold text-4xl mt-16">
-        {title}
-      </div>
+      <div className="w-full text-center font-bold text-4xl mt-16">{title}</div>
 
       {/* Texte darunter */}
       <div className="relative w-full flex flex-col justify-start items-start flex-wrap pt-2">

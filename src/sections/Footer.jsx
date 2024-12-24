@@ -128,7 +128,7 @@ const Footer = () => {
       </div>
 
       {/* Copyright Bereich */}
-      <div className="flex justify-end text-gray-600 mt-6 max-sm:flex-col max-sm:items-center">
+      <div className="flex justify-end text-gray-600 mt-6 max-sm:flex-col max-sm:items-center -mx-80">
         <div className="flex items-center gap-2 font-montserrat cursor-pointer">
           <img
             src={copyright}
