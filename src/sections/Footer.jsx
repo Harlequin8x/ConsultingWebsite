@@ -12,8 +12,8 @@ const Footer = () => {
           <a href="/">
             <img
               src={headerLogo}
-              width={250}
-              height={250}
+              width={180}
+              height={200}
               alt="Logo"
             />
           </a>
