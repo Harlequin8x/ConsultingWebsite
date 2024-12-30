@@ -1,5 +1,5 @@
-import React from 'react';
-import ronney1 from '../assets/images/ronney1.jpg';
+import React from 'react'
+import ronney1 from '../assets/images/ronney1.jpg'
 
 const Calendar = () => {
   return (
@@ -53,13 +53,9 @@ const Calendar = () => {
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Calendar;
-
-
-
-
+export default Calendar
 
 // src="https://outlook.office365.com/owa/calendar/RonneyBawaFinancialGuide@mitNORM.com/bookings/"

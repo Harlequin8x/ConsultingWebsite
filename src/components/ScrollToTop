@@ -1,0 +1,14 @@
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+const ScrollToTop = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Beim Routenwechsel nach oben scrollen
+  }, [location]);
+
+  return null; // Keine UI, nur der Effekt
+};
+
+export default ScrollToTop;

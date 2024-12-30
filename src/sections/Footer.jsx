@@ -2,6 +2,7 @@ import { headerLogo } from '../assets/images/index'
 import { copyright } from '../assets/images/index'
 import { socialMedia, footerLinks } from '../constants/index'
 import { energy, karriere, mitNORM1, mitNORM2, personal } from '../assets/icons'
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -108,28 +109,28 @@ const Footer = () => {
         </div>
 
         {/* Footer right side */}
-        <div className="flex">
-          {/* Links rechts neben den Bildern */}
-          <div className="flex flex-col items-start gap-4">
-            <a
-              href="/impressum" // Verweis auf die ID der HeroImpressum-Section
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-800 font-montserrat text-2xl leading-normal font-bold hover:text-slate-gray cursor-pointer -mx-50"
-            >
-              Impressum
-            </a>
-            <a
-              href="/dataprivacy" // Verweis auf die ID der HeroDataPrivacy-Section
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-800 font-montserrat text-2xl leading-normal font-bold hover:text-slate-gray cursor-pointer -mx-50"
-            >
-              Datenschutzerklärung
-            </a>
-          </div>
+<div className="flex">
+  {/* Links rechts neben den Bildern */}
+  <div className="flex flex-col items-start gap-4">
+    <Link
+      to="/impressum" // Verweis auf die Route für die Impressum-Seite
+      rel="noopener noreferrer"
+      className="text-gray-800 font-montserrat text-2xl leading-normal font-bold hover:text-slate-gray cursor-pointer -mx-50"
+    >
+      Impressum
+    </Link>
+    <Link
+      to="/dataprivacy" // Verweis auf die Route für die Datenschutzerklärung-Seite
+      rel="noopener noreferrer"
+      className="text-gray-800 font-montserrat text-2xl leading-normal font-bold hover:text-slate-gray cursor-pointer -mx-50"
+    >
+      Datenschutzerklärung
+    </Link>
+  </div>
+</div>
+
         </div>
-      </div>
+    
 
       {/* Copyright Bereich */}
       <div className="flex justify-end text-gray-600 mt-6 max-sm:flex-col max-sm:items-center -mx-80">

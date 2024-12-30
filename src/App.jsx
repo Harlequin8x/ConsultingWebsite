@@ -1,11 +1,13 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import { Hero, Footer, Calender } from './sections'
-import Nav from './components/Nav'
-import HeroImpressum from './sections/HeroImpressum'
-import HeroDataPrivacy from './sections/HeroDataPrivacy'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Hero, Footer, Calender } from './sections';
+import Nav from './components/Nav';
+import HeroImpressum from './sections/HeroImpressum';
+import HeroDataPrivacy from './sections/HeroDataPrivacy';
+import ScrollToTop from './components/ScrollToTop'; // Importiere die ScrollToTop-Komponente
 
 const App = () => (
   <Router>
+    <ScrollToTop /> {/* Stelle sicher, dass ScrollToTop hier eingebunden wird */}
     <main className="relative">
       <Nav />
       <Routes>
@@ -51,6 +53,6 @@ const App = () => (
       </Routes>
     </main>
   </Router>
-)
+);
 
-export default App
+export default App;

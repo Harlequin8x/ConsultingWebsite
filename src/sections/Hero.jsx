@@ -1,12 +1,12 @@
-import { ronney1, ronney2 } from '../assets/images';
+import React from 'react';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+
 const rb_video = '/videos/rb_video.mp4';
 import arrow from '../assets/images/arrow.png';
 
 const Hero = () => {
-  const title1 = [
-    'Das Beste an Teamarbeit ist, ',
-    'dass dir Ronney immer zur Seite steht!',
-  ];
+  const title1 = ['Das Beste an Teamarbeit ist,'];
+  const title3 = ['dass dir Ronney immer zur Seite steht!'];
 
   const title2 = [
     <a
@@ -58,14 +58,13 @@ const Hero = () => {
       id="home"
       className="w-full flex flex-col justify-start items-center min-h-screen gap-10 max-container"
     >
-      {/* Titel oben in der Mitte */}
-      <div className="w-full text-center font-bold text-6xl mt-10">
-        <div>{title1[0]}</div> {/* Erster Teil des Textes */}
-        <div className="mt-2">{title1[1]}</div> {/* Zweiter Teil des Textes, mit Abstand nach unten und Versetzung */}
+      <div className="space-y-4 mt-10">
+        <div className="w-full text-center font-bold text-4xl -mx-52">{title1}</div>
+        <div className="w-full text-center font-bold text-4xl mx-24">{title3}</div>
       </div>
 
       {/* Video Container mit Play-Button */}
-      <div className="relative w-full mt-6">
+      <div className="relative w-full mt-8">
         {/* Video für größere Bildschirme */}
         <video
           id="video"
@@ -100,28 +99,43 @@ const Hero = () => {
               key={groupIndex}
               className="w-full flex flex-wrap gap-10 mb-8 justify-center"
             >
-              {paragraphs
-                .slice(groupIndex * 4, groupIndex * 4 + 4)
-                .map((paragraph, index) => {
-                  const parts = paragraph.split(' - ');
-                  return (
-                    <div
-                      key={index}
-                      className="flex-1 font-montserrat text-slate-gray text-lg leading-8 max-w-xs p-6 bg-gray-200 rounded-lg shadow-md"
-                    >
-                      {parts.length > 1 ? (
-                        <>
-                          <div className="text-xl font-bold mb-2">{parts[0]}</div>
-                          <div>{parts[1]}</div>
-                        </>
-                      ) : (
-                        paragraph
-                      )}
-                    </div>
-                  );
-                })}
+              {paragraphs.slice(groupIndex * 4, groupIndex * 4 + 4).map((paragraph, index) => {
+                const parts = paragraph.split(' - ');
+                return (
+                  <div
+                    key={index}
+                    className="flex-1 font-montserrat text-slate-gray text-lg leading-8 max-w-xs p-6 bg-gray-200 rounded-lg shadow-md"
+                  >
+                    {parts.length > 1 ? (
+                      <>
+                        <div className="text-xl font-bold mb-2">{parts[0]}</div>
+                        <div>{parts[1]}</div>
+                      </>
+                    ) : (
+                      paragraph
+                    )}
+                  </div>
+                );
+              })}
             </div>
           ))}
+      </div>
+
+      {/* Neuer Text unter den Paragraphen */}
+      <div className="w-full text-center font-bold text-3xl mt-12">
+        <p>
+          Wenn du deinen Profit steigern möchtest, buche hier ein Kennenlerngespräch.
+        </p>
+        
+        {/* Lottie Animation */}
+        <div className="mt-6 flex justify-center items-center">
+          <DotLottieReact
+            src="https://lottie.host/baf344d8-40e5-4a6b-bba3-ac212bb48e29/uVXRrua9Aa.lottie"
+            loop
+            autoplay           
+            style={{ width: '1000px', height: '500px' }}
+          />
+        </div>
       </div>
     </section>
   );

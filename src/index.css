@@ -72,6 +72,14 @@
     }
   }
   
+  #play-button {
+    opacity: 0.7; /* 70% sichtbar */
+    transition: opacity 0.3s ease; /* Weiche Übergänge für den Opazitätswechsel */
+  }
+  
+  #play-button:hover {
+    opacity: 1; /* 100% sichtbar, wenn die Maus darüber schwebt */
+  }
   
 
 }
