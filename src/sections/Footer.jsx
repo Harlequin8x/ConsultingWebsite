@@ -20,7 +20,7 @@ const Footer = () => {
 
           <p className="leading-7 font-montserrat text-gray-800 sm:max-w-sm font-bold text-3xl -my-4">Dein Financial Guide</p>
 
-          <div className="flex items-center gap-5 mt-8 ">
+          <div className="flex items-center gap-5 mt-8">
             {socialMedia.map((icon) => (
               <a
                 href={icon.href}
@@ -125,6 +125,26 @@ const Footer = () => {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Impressum und Datenschutzerklärung */}
+      <div className="flex justify-center gap-10 mt-10">
+        <a
+          href="/impressum" // Verweis auf die ID der HeroImpressum-Section
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-800 font-montserrat text-base leading-normal hover:text-slate-gray cursor-pointer"
+        >
+          Impressum
+        </a>
+        <a
+          href="/dataprivacy" // Verweis auf die ID der HeroDataPrivacy-Section
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-800 font-montserrat text-base leading-normal hover:text-slate-gray cursor-pointer"
+        >
+          Datenschutzerklärung
+        </a>
       </div>
 
       {/* Copyright Bereich */}
