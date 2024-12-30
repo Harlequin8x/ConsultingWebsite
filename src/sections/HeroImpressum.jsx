@@ -2,31 +2,31 @@ const HeroImpressum = () => {
   return (
     <section
       id="impressum" // Die ID, auf die der Link verweist
-      className="w-full flex flex-col justify-start items-start min-h-screen p-10 bg-gray-100"
+      className="w-full flex flex-col justify-start items-start min-h-screen p-20"
     >
-      <h1 className="text-4xl font-bold mb-6">Impressum</h1>
+      <h1 className="text-5xl font-bold mb-6">Impressum</h1>
 
-      <p className="mb-6">
+      <p className="text-2xl mb-6">
         Ronney Bawa<br />
         Dienstleister<br />
         Birkenweg 51 <br />        
         30827 Garbsen
       </p>
 
-      <h2 className="text-2xl font-semibold mb-4">Kontakt</h2>
-      <p className="mb-6">
+      <h2 className="text-3xl font-semibold mb-4">Kontakt</h2>
+      <p className="text-2xl mb-6">
         Telefon: +49 (0) 173 2768952<br />
         E-Mail: <a href="mailto:R.Bawa@mitNorm.com" className="text-blue-500 hover:underline">R.Bawa@mitNorm.com</a>
       </p>
 
-      <h2 className="text-2xl font-semibold mb-4">Umsatzsteuer-ID</h2>
-      <p className="mb-6">
+      <h2 className="text-3xl font-semibold mb-4">Umsatzsteuer-ID</h2>
+      <p className="text-2xl mb-6">
         Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
         Folgt
       </p>
 
-      <h2 className="text-2xl font-semibold mb-4">Verbraucher­streit­beilegung/Universal­schlichtungs­stelle</h2>
-      <p className="mb-6">
+      <h2 className="text-3xl font-semibold mb-4">Verbraucher­streit­beilegung/Universal­schlichtungs­stelle</h2>
+      <p className="text-2xl mb-6">
         Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
       </p>
 
