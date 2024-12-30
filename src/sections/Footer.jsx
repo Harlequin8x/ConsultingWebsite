@@ -108,43 +108,27 @@ const Footer = () => {
         </div>
 
         {/* Footer right side */}
-        <div className="flex flex-col gap-10">
-          {footerLinks.map((section) => (
-            <div key={section.title}>
-              <h4 className="text-gray-800 font-montserrat text-2xl leading-normal font-medium mb-6">{section.title}</h4>
-              <ul>
-                {section.links.map((link) => (
-                  <li
-                    className="mt-3 text-gray-800 font-montserrat text-base leading-normal hover:text-slate-gray cursor-pointer"
-                    key={link.name}
-                  >
-                    {link.name}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+        <div className="flex">
+          {/* Links rechts neben den Bildern */}
+          <div className="flex flex-col items-start gap-4">
+            <a
+              href="/impressum" // Verweis auf die ID der HeroImpressum-Section
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-800 font-montserrat text-2xl leading-normal font-bold hover:text-slate-gray cursor-pointer -mx-50"
+            >
+              Impressum
+            </a>
+            <a
+              href="/dataprivacy" // Verweis auf die ID der HeroDataPrivacy-Section
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-800 font-montserrat text-2xl leading-normal font-bold hover:text-slate-gray cursor-pointer -mx-50"
+            >
+              Datenschutzerklärung
+            </a>
+          </div>
         </div>
-      </div>
-
-      {/* Impressum und Datenschutzerklärung */}
-      <div className="flex justify-center gap-10 mt-10">
-        <a
-          href="/impressum" // Verweis auf die ID der HeroImpressum-Section
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-800 font-montserrat text-base leading-normal hover:text-slate-gray cursor-pointer"
-        >
-          Impressum
-        </a>
-        <a
-          href="/dataprivacy" // Verweis auf die ID der HeroDataPrivacy-Section
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-800 font-montserrat text-base leading-normal hover:text-slate-gray cursor-pointer"
-        >
-          Datenschutzerklärung
-        </a>
       </div>
 
       {/* Copyright Bereich */}
@@ -158,7 +142,7 @@ const Footer = () => {
             className="rounded-full m-0"
           />
           <div className="text-gray-800">
-            <p>Ronney Bawa 2024</p>
+            <p>Ronney Bawa 2025 </p>
           </div>
         </div>
       </div>
