@@ -121,24 +121,33 @@ const Hero = () => {
           ))}
       </div>
 
-      {/* Neuer Text unter den Paragraphen */}
-      <div className="w-full text-center font-bold text-3xl mt-12">
-        <p>
-          Wenn du deinen Profit steigern möchtest, buche hier ein Kennenlerngespräch.
-        </p>
-        
-        {/* Lottie Animation */}
-        <div className="mt-6 flex justify-center items-center">
-          <DotLottieReact
-            src="https://lottie.host/baf344d8-40e5-4a6b-bba3-ac212bb48e29/uVXRrua9Aa.lottie"
-            loop
-            autoplay           
-            style={{ width: '1000px', height: '500px' }}
-          />
-        </div>
-      </div>
+ {/* Neuer Text unter den Paragraphen */}
+<div className="w-full text-center font-bold text-3xl mt-12">
+  <p>
+    Wenn du deinen Profit steigern möchtest, buche hier ein Kennenlerngespräch.
+  </p>
+  
+  {/* Lottie Animation */}
+  <div className="mt-6 flex justify-center items-center gap-4"> {/* Flexbox-Container mit Abstand zwischen den Elementen */}
+    <DotLottieReact
+      src="https://lottie.host/bfa26371-452f-4349-ad0f-c3e6547441a8/XX4BemWRYf.lottie"
+      loop
+      autoplay
+      style={{ width: '500px', height: '250px' }} // Verkleinerte Größe, damit beide nebeneinander passen
+    />
+    <DotLottieReact
+      src="https://lottie.host/bfa26371-452f-4349-ad0f-c3e6547441a8/XX4BemWRYf.lottie"
+      loop
+      autoplay
+      style={{ width: '500px', height: '250px' }} // Gleiche Größe wie die erste Animation
+    />
+  </div>
+</div>
+
+
     </section>
   );
 };
 
 export default Hero;
+
