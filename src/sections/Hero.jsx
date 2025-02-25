@@ -1,7 +1,7 @@
 import React from 'react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
-const rb_video = '/videos/rb_video.mp4';
+const rb_video = '/videos/rb_video.m4v';
 import arrow from '../assets/images/arrow.png';
 
 const Hero = () => {
